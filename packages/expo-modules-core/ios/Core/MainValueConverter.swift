@@ -29,7 +29,7 @@ public struct MainValueConverter: ~Copyable {
       let type = types[index]
 
       do {
-        return try toNative(value.copy(), type)
+        return try toNative(value, type)
       } catch {
         throw ArgumentCastException((index: index, type: type)).causedBy(error)
       }
